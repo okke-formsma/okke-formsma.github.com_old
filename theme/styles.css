@@ -57,10 +57,10 @@ main h1 {
 
 @media (min-width: 48em) {
     body {
-        grid-template-columns: 18em 1fr;
+        grid-template-columns: 18em fit-content(50em) auto;
         grid-template-areas:
-            "header main"
-            "header footer";
+            "header main space"
+            "header footer space";
 
     height: 100vh;
     }
