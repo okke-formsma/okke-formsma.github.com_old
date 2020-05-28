@@ -6,17 +6,18 @@ a:hover,
 a:focus {
     text-decoration: underline;
 }
+pre {
+    white-space: pre-wrap;
+}
 
 body {
     display: grid;
-    grid-template-columns: 200px 1fr;
     margin: 0;
     grid-gap: 0;
     grid-template-areas:
-        "header main"
-        "header main";
-    height: 100vh;
-    width: 100vw;
+        "header"
+        "main"
+        "footer";
     align-items: baseline;
     background: #E0F1F6;
 }
@@ -27,8 +28,7 @@ body > header {
     flex-direction: column;
     background: #F9C22E;
     padding: 8px;
-    border-right: 2px dashed #53B3CB;
-    height: 100%;
+    border: 2px dashed #53B3CB;
 }
 body > header h1 {
     text-align: center;
@@ -39,8 +39,7 @@ body > header h1 a {
 
 body > main {
     grid-area: main;
-    padding: 8px;
-    height: 100%;
+    margin: 8px;
 }
 
 body > footer {
@@ -56,6 +55,27 @@ main h1 {
     letter-spacing: 0.1em;
 }
 
-main h2 {
+@media (min-width: 48em) {
+    body {
+        grid-template-columns: 18em 1fr;
+        grid-template-areas:
+            "header main"
+            "header footer";
 
+    height: 100vh;
+    }
+
+    body > header {
+        height: 100%;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
+
+    .footer {
+        text-align: center;
+    }
 }

@@ -63,15 +63,7 @@
                         </li>
                     {% endfor %}
                 {% endif %}
-                {% if SOCIAL %}
-                    {% for title, url in SOCIAL %}
-                        <li>
-                            <a href="{{ url }}">
-                                {{ title }}
-                            </a>
-                        </li>
-                    {% endfor %}
-                {% endif %}
+
             </ul>
         </nav>
     </header>
@@ -79,5 +71,18 @@
         {% block content %}
         {% endblock %}
     </main>
+    {#
+    <footer>
+         {% if SOCIAL %}
+            {% for title, url in SOCIAL %}
+                <li>
+                    <a href="{{ url }}">
+                        {{ title }}
+                    </a>
+                </li>
+            {% endfor %}
+        {% endif %}
+    </footer>
+    #}
 </body>
 </html>
