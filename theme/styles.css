@@ -6,6 +6,9 @@ a:hover,
 a:focus {
     text-decoration: underline;
 }
+pre {
+    white-space: pre-wrap;
+}
 
 body {
     display: grid;
@@ -26,9 +29,6 @@ body > header {
     background: #F9C22E;
     padding: 8px;
     border: 2px dashed #53B3CB;
-}
-pre {
-    white-space: pre-line;
 }
 body > header h1 {
     text-align: center;
@@ -57,7 +57,7 @@ main h1 {
 
 @media (min-width: 48em) {
     body {
-        grid-template-columns: 200px 1fr;
+        grid-template-columns: 18em 1fr;
         grid-template-areas:
             "header main"
             "header footer";
