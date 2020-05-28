@@ -1,48 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-min.css">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://okke-formsma.github.io/theme/styles.css" />
+    <link rel="stylesheet" href="./theme/styles.css" />
 
     <title>Okke's blog</title>
     <meta charset="utf-8" />
     <meta name="generator" content="Pelican" />
-    <link href="https://okke-formsma.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Okke's blog Full Atom Feed" />
 </head>
 
-<body id="layout" class="pure-g">
-    <div class="sidebar pure-u-1 pure-u-md-1-4">
-        <div class="header">
-                <h1 class="brandtitle"><a href="https://okke-formsma.github.io/">Okke's blog</a></h1>
+<body>
+    <header>
+        <h1 class="title"><a href="./">Okke's blog</a></h1>
 
-            <nav class="nav">
-                <ul class="nav-list">
-                            <li class="nav-item">
-                                <a class="pure-button" href="https://okke-formsma.github.io/category/misc.html">
-                                    misc
-                                </a>
-                            </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-
-    <div class="content pure-u-1 pure-u-md-3-4">
-        <div>
-<section id="content">
- <div class="posts">
-    <h1 class="content-subhead">Recent Posts</h1>
-        <section class="post">
-                <header class="post-header"> <h2 class="post-title"><a href="https://okke-formsma.github.io/using-a-trackball-as-scrollwheel.html" rel="bookmark" title="Permalink to Using a trackball as scrollwheel">Using a trackball as scrollwheel</a></h2> </header>
-                <p class="post-meta">
+        <nav>
+            <ul>
+                        <li>
+                            <a href="https://github.com/okke-formsma/">
+                                GitHub
+                            </a>
+                        </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <section id="posts">
+            <h1>Recent Posts</h1>
+            <article class="post">
+                <header>
+                    <h2>
+                        <a href="./using-a-trackball-as-scrollwheel.html" rel="bookmark" title="Permalink to Using a trackball as scrollwheel">
+                            Using a trackball as scrollwheel
+                        </a>
+                    </h2>
+                </header>
+                <footer>
                     <time class="published" datetime="2020-05-27T19:35:00+02:00"> 2020-05-27 </time>
-                    <address class="vcard author">By
-                        Okke
-                    </address>
-                </p>
+                </footer>
                 <div class="post-content"> <p>Tiny scrollwheel on mice have a few problems. They are small and the movement to scroll is prone to RSI. I've been using an Elecom HUGE trackball, and I love it. Except it doesn't have a nice scroll ring as the Kensingtons have. Today I figured out how to turn the entire trackball into a huge scrollwheel by configuring libinput.</p>
 <p>To try it out, run a few xinput commands. </p>
 <ol>
@@ -57,9 +51,8 @@
     Option  &quot;ScrollButton&quot; &quot;12&quot;
 EndSection
 </pre></div> </div>
-</ol><!-- /#posts-list -->
-</section><!-- /#content -->
-        </div>
-    </div>
+            </article>
+    </section>
+    </main>
 </body>
 </html>

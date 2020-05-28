@@ -1,5 +1,7 @@
 Title: Using a trackball as scrollwheel
 Date: 2020-05-27 19:35
+Categories: 
+
 
 Tiny scrollwheel on mice have a few problems. They are small and the movement to scroll is prone to RSI. I've been using an Elecom HUGE trackball, and I love it. Except it doesn't have a nice scroll ring as the Kensingtons have. Today I figured out how to turn the entire trackball into a huge scrollwheel by configuring libinput.
 

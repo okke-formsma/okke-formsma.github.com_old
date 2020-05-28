@@ -19,7 +19,9 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
-DISPLAY_CATEGORIES_ON_MENU = True
+DISPLAY_CATEGORIES_ON_MENU = False
+CATEGORY_SAVE_AS = ''
+
 # Blogroll
 LINKS = (('FarmFest', 'http://www.farmfest.nl/'),)
 
