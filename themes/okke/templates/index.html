@@ -7,6 +7,7 @@
         {% for article in articles_page.object_list %}
             <article class="post">
                 <header>
+                    <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
                     <h2>
                         <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
                             {{ article.title }}
@@ -14,7 +15,6 @@
                     </h2>
                 </header>
                 <footer>
-                    <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
                     {#
                     <address class="author">By
                     {% for author in article.authors %}

@@ -24,6 +24,12 @@
 {% block content %}
     <article class="post">
         <header>
+            <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
+            {% if article.modified %}
+                <time class="modified" datetime="{{ article.modified.isoformat() }}">
+                  {{ article.locale_modified }}
+                </time>
+            {% endif %}
             <h2>
                 <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
                     {{ article.title }}
@@ -33,12 +39,7 @@
             {{ translations.translations_for(article) }}
         </header>
         <footer>
-            <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
-            {% if article.modified %}
-                <time class="modified" datetime="{{ article.modified.isoformat() }}">
-                  {{ article.locale_modified }}
-                </time>
-            {% endif %}
+
             {#
             <address class="author">By
                 {% for author in article.authors %}
