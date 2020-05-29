@@ -10,7 +10,13 @@ pre {
     white-space: pre-wrap;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Chelsea Market', cursive;
+}
+
 body {
+    font-family: 'Libre Franklin', sans-serif;
+    color: #373F51;
     display: grid;
     margin: 0;
     grid-gap: 0;
@@ -28,7 +34,8 @@ body > header {
     flex-direction: column;
     background: #F9C22E;
     padding: 8px;
-    border: 2px dashed #53B3CB;
+    box-sizing: border-box;
+    border-bottom: 2px dashed #53B3CB;
 }
 body > header h1 {
     text-align: center;
@@ -67,15 +74,8 @@ main h1 {
 
     body > header {
         height: 100%;
+        border-bottom: none;
+        border-right: 2px dashed #53B3CB;
     }
 
-    .sidebar {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-    }
-
-    .footer {
-        text-align: center;
-    }
 }
