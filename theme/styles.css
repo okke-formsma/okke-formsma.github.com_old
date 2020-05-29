@@ -24,7 +24,6 @@ body {
         "header"
         "main"
         "footer";
-    align-items: baseline;
     background: #E0F1F6;
 }
 
@@ -53,6 +52,10 @@ body > footer {
     grid-area: footer;
 }
 
+article header h2 {
+    margin-top: 0;
+}
+
 main h1 {
     color: #6E8898;
     border-bottom: 1px solid #6E8898;
@@ -68,8 +71,8 @@ main h1 {
         grid-template-areas:
             "header main space"
             "header footer space";
-
-    height: 100vh;
+        /*align-items: baseline;*/
+        height: 100vh;
     }
 
     body > header {
