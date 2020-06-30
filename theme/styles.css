@@ -1,5 +1,5 @@
 a {
-    text-decoration: dotted;
+    text-decoration: none;
     color: #373F51;
 }
 a:hover,
@@ -26,7 +26,9 @@ body {
         "footer";
     background: #E0F1F6;
 }
-
+.post-content a {
+    text-decoration: underline;
+}
 body > header {
     grid-area: header;
     display: flex;
