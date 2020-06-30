@@ -26,6 +26,54 @@
 <h2>Articles by Okke</h2>
             <article class="post">
                 <header>
+                    <time class="published" datetime="2020-06-30T00:00:00+02:00"> 2020-06-30 </time>
+                    <h2>
+                        <a href="https://okke-formsma.github.io/blackmagic-on-a-bluepill.html" rel="bookmark" title="Permalink to Blackmagic on a bluepill">
+                            Blackmagic on a bluepill
+                        </a>
+                    </h2>
+                </header>
+                <footer>
+                </footer>
+                <div class="post-content"> <p>There's an excellent article on <a href="https://github.com/joric/nrfmicro/wiki/Software">flashing blackmagic firmware onto a bluepill</a> by joric. 
+I had to change some things to make it work on ubuntu.
+The bluepill has some issues with wrong resistors (I had to change R3 on the bluepill from 100k to 10k ohm). 
+The blackpill with stm32f103 processor does not have this problem, and is recommended.</p>
+<ul>
+<li>
+<p>Connect the usb-to-uart converter to the bluemicro and set the bluemicro boot0 jumper to 1. </p>
+</li>
+<li>
+<p>Find the usb port that the converter is attached to</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="err">&gt; dmesg | grep tty</span>
+<span class="err">[157210.247340] cp210x ttyUSB0: cp210x converter now disconnected from ttyUSB0</span>
+<span class="err">[157221.140041] usb 1-2: cp210x converter now attached to ttyUSB0</span>
+</pre></div>
+
+
+<ul>
+<li>Install the dfu. Run stm32loader.py on python2 with the pySerial package installed:</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="err">python2 stm32loader.py -p /dev/ttyUSB0 -ewv blackmagic_dfu.bin</span>
+</pre></div>
+
+
+<ul>
+<li>Install the blackmagic firmware:</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="err">stm32flash -w blackmagic.bin /dev/ttyUSB0 -S 0x08002000</span>
+</pre></div>
+
+
+<ul>
+<li>Set the jumper back to 0, disconnect the uart adapter, connect the bluepill to usb.</li>
+<li>Check if the blackmagic probe is recognized with <code>lsusb</code>.</li>
+</ul> </div>
+            </article>
+            <article class="post">
+                <header>
                     <time class="published" datetime="2020-05-27T19:35:00+02:00"> 2020-05-27 </time>
                     <h2>
                         <a href="https://okke-formsma.github.io/using-a-trackball-as-scrollwheel.html" rel="bookmark" title="Permalink to Using a trackball as scrollwheel">
