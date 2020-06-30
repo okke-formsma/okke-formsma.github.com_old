@@ -35,10 +35,11 @@
                 </header>
                 <footer>
                 </footer>
-                <div class="post-content"> <p>There's an excellent article on <a href="https://github.com/joric/nrfmicro/wiki/Software">flashing blackmagic firmware onto a bluepill</a> by joric. 
-I had to change some things to make it work on ubuntu.
-The bluepill has some issues with wrong resistors (I had to change R3 on the bluepill from 100k to 10k ohm). 
-The blackpill with stm32f103 processor does not have this problem, and is recommended.</p>
+                <div class="post-content"> <p>To flash <a href="https://github.com/joric/nrfmicro/wiki">nrfmicro</a> chips, you can use a bluepill with blackmagic installed.</p>
+<p>The bluepill has some issues with wrong resistors (I had to change R3 on the bluepill from 100k to 10k ohm). 
+The blackpill with stm32f103 processor does not have this problem, and is recommended. (Black Magic is not supported on blackpill 1.2 (stm32f401) or blackpill 2.0 (stm32f411) at this time.</p>
+<p>There's an excellent article on <a href="https://github.com/joric/nrfmicro/wiki/Software">flashing blackmagic firmware onto a bluepill</a> by joric. 
+Here are some the steps I went through to make it work on ubuntu.</p>
 <ul>
 <li>
 <p>Connect the usb-to-uart converter to the bluemicro and set the bluemicro boot0 jumper to 1. </p>

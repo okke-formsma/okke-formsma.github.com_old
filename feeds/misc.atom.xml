@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Okke's blog - misc</title><link href="https://okke-formsma.github.io/" rel="alternate"></link><link href="https://okke-formsma.github.io/feeds/misc.atom.xml" rel="self"></link><id>https://okke-formsma.github.io/</id><updated>2020-06-30T00:00:00+02:00</updated><entry><title>Blackmagic on a bluepill</title><link href="https://okke-formsma.github.io/blackmagic-on-a-bluepill.html" rel="alternate"></link><published>2020-06-30T00:00:00+02:00</published><updated>2020-06-30T00:00:00+02:00</updated><author><name>Okke</name></author><id>tag:okke-formsma.github.io,2020-06-30:/blackmagic-on-a-bluepill.html</id><summary type="html">&lt;p&gt;There's an excellent article on &lt;a href="https://github.com/joric/nrfmicro/wiki/Software"&gt;flashing blackmagic firmware onto a bluepill&lt;/a&gt; by joric. 
-I had to change some things to make it work on ubuntu.
-The bluepill has some issues with wrong resistors (I had to change R3 on the bluepill from 100k to 10k ohm). 
-The blackpill with stm32f103 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;There's an excellent article on &lt;a href="https://github.com/joric/nrfmicro/wiki/Software"&gt;flashing blackmagic firmware onto a bluepill&lt;/a&gt; by joric. 
-I had to change some things to make it work on ubuntu.
-The bluepill has some issues with wrong resistors (I had to change R3 on the bluepill from 100k to 10k ohm). 
-The blackpill with stm32f103 processor does not have this problem, and is recommended.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Okke's blog - misc</title><link href="https://okke-formsma.github.io/" rel="alternate"></link><link href="https://okke-formsma.github.io/feeds/misc.atom.xml" rel="self"></link><id>https://okke-formsma.github.io/</id><updated>2020-06-30T00:00:00+02:00</updated><entry><title>Blackmagic on a bluepill</title><link href="https://okke-formsma.github.io/blackmagic-on-a-bluepill.html" rel="alternate"></link><published>2020-06-30T00:00:00+02:00</published><updated>2020-06-30T00:00:00+02:00</updated><author><name>Okke</name></author><id>tag:okke-formsma.github.io,2020-06-30:/blackmagic-on-a-bluepill.html</id><summary type="html">&lt;p&gt;To flash &lt;a href="https://github.com/joric/nrfmicro/wiki"&gt;nrfmicro&lt;/a&gt; chips, you can use a bluepill with blackmagic installed.&lt;/p&gt;
+&lt;p&gt;The bluepill has some issues with wrong resistors (I had to change R3 on the bluepill from 100k to 10k ohm). 
+The blackpill with stm32f103 processor does not have this problem, and is recommended. (Black Magic is not …&lt;/p&gt;</summary><content type="html">&lt;p&gt;To flash &lt;a href="https://github.com/joric/nrfmicro/wiki"&gt;nrfmicro&lt;/a&gt; chips, you can use a bluepill with blackmagic installed.&lt;/p&gt;
+&lt;p&gt;The bluepill has some issues with wrong resistors (I had to change R3 on the bluepill from 100k to 10k ohm). 
+The blackpill with stm32f103 processor does not have this problem, and is recommended. (Black Magic is not supported on blackpill 1.2 (stm32f401) or blackpill 2.0 (stm32f411) at this time.&lt;/p&gt;
+&lt;p&gt;There's an excellent article on &lt;a href="https://github.com/joric/nrfmicro/wiki/Software"&gt;flashing blackmagic firmware onto a bluepill&lt;/a&gt; by joric. 
+Here are some the steps I went through to make it work on ubuntu.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Connect the usb-to-uart converter to the bluemicro and set the bluemicro boot0 jumper to 1. &lt;/p&gt;
